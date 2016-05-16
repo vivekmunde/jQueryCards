@@ -23,22 +23,26 @@
           <a class="navbar-brand" href="#">Players</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Goal Keepers</a></li>
-          <li><a href="#">Strikers</a></li>
+          <li><a href="#goalKeepersTitle">Goal Keepers</a></li>
+          <li><a href="#strikersTitle">Strikers</a></li>
         </ul>
       </div>
     </nav>
   </div>
   <div class="container">
-    <h3>Goal Keepers</h3>
-    <div id="goalKeepers">
+    <h3 id="goalKeepersTitle">Goal Keepers</h3>
+    <div id="goalKeepers"></div>
+    <h3 id="strikersTitle">Strikers</h3>
+    <div class="col-xs-12">
+      <div id="strikers"></div>
     </div>
-    <div class="container">
-      <hr/>
-      <p>
-        Code available @ <a target="_blank" href="https://github.com/vivekmunde/jQueryCards.git">https://github.com/vivekmunde/jQueryCards.git</a>
-      </p>
-    </div>
+  </div>
+  <div class="container">
+    <hr/>
+    <p>
+      Code available @ <a target="_blank" href="https://github.com/vivekmunde/jQueryCards.git">https://github.com/vivekmunde/jQueryCards.git</a>
+    </p>
+  </div>
 </body>
 
 <!-- build:js scripts/script.js -->
@@ -50,6 +54,9 @@
 <script src="scripts/players/goalKeepers/view.js"></script>
 <script src="scripts/players/goalKeepers/controller.js"></script>
 <script src="scripts/players/goalKeepers/goalKeepers.js"></script>
+<script src="scripts/players/strikers/view.js"></script>
+<script src="scripts/players/strikers/controller.js"></script>
+<script src="scripts/players/strikers/strikers.js"></script>
 <!-- endbuild -->
 
 </html>

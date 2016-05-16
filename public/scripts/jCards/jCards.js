@@ -11,6 +11,18 @@
       _options.matchCardsHeight = options.matchCardsHeight ? options.matchCardsHeight : _options.matchCardsHeight;
     }
 
+    var rematchCardsHeight = function() {
+
+      var _allCards = _cards.find('[data-j-card="card"]').css('min-height', 0);
+
+      cardMinHeight = Math.max.apply(null, _allCards.map(function() {
+        return $(this).outerHeight();
+      }).get());
+
+      _allCards.css('min-height', cardMinHeight);
+
+    };
+
     var _cardBgHandler = function() {
       var _cardBg = this.data('j-card-bg');
       if (_cardBg) {
@@ -51,18 +63,6 @@
       });
 
     if (_options.matchCardsHeight) {
-
-      var rematchCardsHeight = function() {
-
-        var _allCards = _cards.find('[data-j-card="card"]').css('min-height', 0);
-
-        cardMinHeight = Math.max.apply(null, _allCards.map(function() {
-          return $(this).outerHeight();
-        }).get());
-
-        _allCards.css('min-height', cardMinHeight);
-
-      };
 
       $(window).bind('resize', rematchCardsHeight);
 
