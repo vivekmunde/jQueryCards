@@ -27,11 +27,8 @@
               .append(
                 $('<div>')
                 .addClass('panel-heading h4')
-                .append(
-                  $('<div>')
-                  .append($('<i>').addClass('fa fa-futbol-o'))
-                  .append($('<span>').text(cardData.title))
-                )
+                .append($('<i>').addClass('fa fa-futbol-o'))
+                .append($('<span>').text(cardData.title))
               )
               .append(
                 $('<div>')

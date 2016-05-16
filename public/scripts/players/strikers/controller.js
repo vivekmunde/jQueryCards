@@ -39,7 +39,7 @@
         backgroundImg: 'img/troy-deeney.jpg'
     },{
         title:'Olivier Giroud',
-        description: 'Olivier Giroud (French pronunciation: [ɔlivje ʒiʁu]; born 30 September 1986) is a French footballer who plays for English club Arsenal and the France national team. He plays as a striker and is known for his reliable goal scoring rate, size, technical ability, heading, powerful shot, link-up play and celebrations. ',
+        description: 'Olivier Giroud (French pronunciation: [ɔlivje ʒiʁu]; born 30 September 1986) is a French footballer who plays for English club Arsenal and the France national team. He plays as a striker and is known for his reliable goal scoring rate, size, technical ability, heading, powerful shot, link-up play. ',
         backgroundImg: 'img/olivier-giroud.jpg'
     }]);
 
