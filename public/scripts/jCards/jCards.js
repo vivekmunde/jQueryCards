@@ -9,6 +9,8 @@
 
     if (!_cards.data('j-cards')) return;
 
+    var _eventNamespace = _cards.data('j-cards');
+
     /* ========================================================
      Configure Options
      ======================================================== */
@@ -65,8 +67,8 @@
 
         /* Card hover content */
         _card
-          .bind('mouseover', _cardMouseOverHandler.bind(_cardHover))
-          .bind('mouseout', _cardMouseOutHandler.bind(_cardHover));
+          .bind('mouseover.' + _eventNamespace, _cardMouseOverHandler.bind(_cardHover))
+          .bind('mouseout.' + _eventNamespace, _cardMouseOutHandler.bind(_cardHover));
 
         /* Configure the min height for cards
         Its used for matching the heights of all cards */
@@ -77,8 +79,6 @@
     /* ========================================================
      Match heights of all Cards
      ======================================================== */
-
-    var _eventNamespace = _cards.data('j-cards');
 
     var rematchCardsHeight = function() {
 
