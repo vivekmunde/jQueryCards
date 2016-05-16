@@ -9,6 +9,4 @@
   var strikersController = new players.strikersCardsController(strikersModel, strikersView);
   strikersController.display();
 
-  ctl.remove();
-
 }(jQuery));
