@@ -87,12 +87,12 @@
                       .append(
                         $('<button>')
                         .addClass('btn btn-info')
-                        .append($('<i>').addClass('fa fa-facebook'))
+                        .append($('<i>').addClass('fa fa-edit'))
                       )
                       .append(
                         $('<button>')
                         .addClass('btn btn-info')
-                        .append($('<i>').addClass('fa fa-twitter'))
+                        .append($('<i>').addClass('fa fa-trash-o'))
                       )
                     )
                   )

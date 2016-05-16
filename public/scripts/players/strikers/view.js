@@ -52,21 +52,21 @@
                     .append(
                       $('<div>')
                       .addClass('btn-group btn-group-xs')
-                      .append($('<button>').addClass('btn btn-warning').text('Career'))
-                      .append($('<button>').addClass('btn btn-warning').text('Personal Life'))
+                      .append($('<button>').addClass('btn btn-danger').text('Career'))
+                      .append($('<button>').addClass('btn btn-danger').text('Personal Life'))
                     )
                     .append(
                       $('<div>')
                       .addClass('btn-group btn-group-xs pull-right')
                       .append(
                         $('<button>')
-                        .addClass('btn btn-info')
-                        .append($('<i>').addClass('fa fa-facebook'))
+                        .addClass('btn btn-primary')
+                        .append($('<i>').addClass('fa fa-edit'))
                       )
                       .append(
                         $('<button>')
-                        .addClass('btn btn-info')
-                        .append($('<i>').addClass('fa fa-twitter'))
+                        .addClass('btn btn-primary')
+                        .append($('<i>').addClass('fa fa-trash-o'))
                       )
                     )
                   )
