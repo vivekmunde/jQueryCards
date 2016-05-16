@@ -1,12 +1,18 @@
 (function($) {
 
-  var ctl = $('#strikers');
+  var strikerLoadHandler = function() {
 
-  var strikersModel = new players.playerCardsModel([]);
+    var ctl = $('#strikers');
 
-  var strikersView = new players.strikersView(strikersModel, ctl);
+    var strikersModel = new players.playerCardsModel([]);
 
-  var strikersController = new players.strikersCardsController(strikersModel, strikersView);
-  strikersController.display();
+    var strikersView = new players.strikersView(strikersModel, ctl);
+
+    var strikersController = new players.strikersCardsController(strikersModel, strikersView);
+    strikersController.display();
+
+  };
+
+  $(document).ready(strikerLoadHandler);
 
 }(jQuery));

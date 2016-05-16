@@ -1,12 +1,18 @@
 (function($) {
 
-  var ctl = $('#goalKeepers');
+  var goalKeepersLoadHandler = function() {
 
-  var goalKeepersModel = new players.playerCardsModel([]);
+    var ctl = $('#goalKeepers');
 
-  var goalKeepersView = new players.goalKeepersView(goalKeepersModel, ctl);
+    var goalKeepersModel = new players.playerCardsModel([]);
 
-  var goalKeepersController = new players.goalKeepersCardsController(goalKeepersModel, goalKeepersView);
-  goalKeepersController.display();
+    var goalKeepersView = new players.goalKeepersView(goalKeepersModel, ctl);
+
+    var goalKeepersController = new players.goalKeepersCardsController(goalKeepersModel, goalKeepersView);
+    goalKeepersController.display();
+
+  };
+
+  $(document).ready(goalKeepersLoadHandler);
 
 }(jQuery));

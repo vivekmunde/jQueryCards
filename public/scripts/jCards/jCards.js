@@ -100,6 +100,7 @@
 
     if (_options.matchCardsHeight) {
 
+      /* Rematch the cards height on window resize */
       $(window).bind('resize.' + _eventNamespace, rematchCardsHeight);
 
       _cards.find('[data-j-card="card"]').css('min-height', cardMinHeight);
