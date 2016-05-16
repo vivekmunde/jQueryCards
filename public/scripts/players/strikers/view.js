@@ -28,7 +28,7 @@
                 .addClass('panel-heading h4')
                 .append(
                   $('<div>')
-                  .append($('<i>').addClass('fa fa-hand-paper-o'))
+                  .append($('<i>').addClass('fa fa-futbol-o'))
                   .append($('<span>').text(cardData.title))
                 )
               )
