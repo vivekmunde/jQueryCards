@@ -7,6 +7,8 @@
         matchCardsHeight: true
       };
 
+    if (!_cards.data('j-cards')) return;
+
     /* ========================================================
      Configure Options
      ======================================================== */
@@ -76,7 +78,15 @@
      Match heights of all Cards
      ======================================================== */
 
+    var _eventNamespace = _cards.data('j-cards');
+
     var rematchCardsHeight = function() {
+
+      /* If the cards no more exist in DOM then remove the resize event listener */
+      if (!$.contains(document, _cards[0])) {
+        $(window).unbind('resize.' + _eventNamespace, rematchCardsHeight);
+        return;
+      }
 
       var _allCards = _cards.find('[data-j-card="card"]').css('min-height', 0);
 
@@ -90,7 +100,7 @@
 
     if (_options.matchCardsHeight) {
 
-      $(window).bind('resize', rematchCardsHeight);
+      $(window).bind('resize.' + _eventNamespace, rematchCardsHeight);
 
       _cards.find('[data-j-card="card"]').css('min-height', cardMinHeight);
     }

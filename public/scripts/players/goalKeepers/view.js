@@ -11,6 +11,7 @@
 
     if (_this._element && _this._model) {
       _this._element
+        .attr('data-j-cards', 'goalKeepers')
         .addClass('row pi-player-cards pi-player-cards-gtrd');
 
       var cardRender = function(cardData, index) {
@@ -36,38 +37,33 @@
                 $('<div>')
                 .addClass('panel-body')
                 .append(
-                  $('<p>')
-                  .append(
-                    $('<div>')
-                    .append($('<span>').text('Date Of Birth:'))
-                    .append($('<span>').text(cardData.dob))
-                  )
-                  .append(
-                    $('<div>')
-                    .append($('<span>').text('Height:'))
-                    .append($('<span>').text(cardData.height))
-                  )
-                  .append(
-                    $('<div>')
-                    .append($('<span>').text('Weight:'))
-                    .append($('<span>').text(cardData.weight))
-                  )
-                  .append(
-                    $('<div>')
-                    .append($('<span>').text('Age:'))
-                    .append($('<span>').text(cardData.age))
-                  )
-                  .append(
-                    $('<div>')
-                    .append($('<span>').text('Country:'))
-                    .append($('<span>').text(cardData.country))
-                  )
+                  $('<div>')
+                  .append($('<span>').text('Date Of Birth: '))
+                  .append($('<span>').text(cardData.dob))
                 )
                 .append(
-                  $('<p>')
-                  .append(
-                    $('<div>').text(cardData.description)
-                  )
+                  $('<div>')
+                  .append($('<span>').text('Height: '))
+                  .append($('<span>').text(cardData.height))
+                )
+                .append(
+                  $('<div>')
+                  .append($('<span>').text('Weight: '))
+                  .append($('<span>').text(cardData.weight))
+                )
+                .append(
+                  $('<div>')
+                  .append($('<span>').text('Age: '))
+                  .append($('<span>').text(cardData.age))
+                )
+                .append(
+                  $('<div>')
+                  .append($('<span>').text('Country: '))
+                  .append($('<span>').text(cardData.country))
+                )
+                .append($('<br>'))
+                .append(
+                  $('<div>').text(cardData.description)
                 )
               )
               .append(

@@ -11,6 +11,7 @@
 
     if (_this._element && _this._model) {
       _this._element
+        .attr('data-j-cards', 'strikers')
         .addClass('row pi-player-cards pi-player-cards-ngtrd');
 
       var cardRender = function(cardData, index) {
@@ -36,10 +37,7 @@
                 $('<div>')
                 .addClass('panel-body')
                 .append(
-                  $('<p>')
-                  .append(
-                    $('<div>').text(cardData.description)
-                  )
+                  $('<div>').text(cardData.description)
                 )
               )
               .append(
